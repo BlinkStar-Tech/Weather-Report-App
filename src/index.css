@@ -47,7 +47,7 @@ body {
   z-index: -1;
   height: 100%;
   width: 100%;
-  background: url("clouds.png");
+  background: url("./images/Cloud_PNG_Clipart-869.png");
 }
 
 .search-section {
@@ -117,7 +117,7 @@ body {
 }
 
 .search-section .location-button span {
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .weather-section :where(h2, p) {
