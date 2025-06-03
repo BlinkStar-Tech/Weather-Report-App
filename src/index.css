@@ -38,6 +38,7 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  transition: all 0.3s ease;
 }
 
 .container::after {
@@ -74,6 +75,7 @@ body {
   left: 12px;
   font-size: 18px;
   transform: translateY(-50%);
+  z-index: 2;
 }
 
 .search-section .search-input {
@@ -86,6 +88,7 @@ body {
   padding: 0 12px 0 35px;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.3s ease;
 }
 
 .search-section .search-input:focus {
@@ -93,8 +96,8 @@ body {
 }
 
 .search-section .search-input::placeholder {
-  color: #ddd;
-  text-transform: none;
+  color: rgba(255, 255, 255, 0.7);
+  transition: opacity 0.3s ease;
 }
 
 .search-section .location-button {
@@ -128,7 +131,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 5px 0;
   gap: 20px;
@@ -142,7 +145,6 @@ body {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 6px;
   width: calc(100% - 20px);
-  margin-bottom: 5px;
 }
 
 .current-weather .date {
@@ -161,7 +163,6 @@ body {
   width: 100px;
   height: 100px;
   object-fit: contain;
-  margin: 5px 0;
 }
 
 .current-weather .temperature {
@@ -181,12 +182,14 @@ body {
 .current-weather .description {
   font-size: 1rem;
   margin: 0;
+  text-align: center;
 }
 
 .hourly-forecast {
   flex-shrink: 0;
   padding: 8px 12px;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
+  margin-top: auto;
 }
 
 .hourly-forecast .weather-list {
@@ -246,61 +249,116 @@ body {
   line-height: 23px;
 }
 
-/* Responsive media query code for small screen */
+/* Media queries for responsive design */
 @media (max-width: 624px) {
-  body,
-  .search-section {
-    padding: 20px;
-  }
-
-  .hourly-forecast {
-    padding: 16px 20px;
-  }
-
-  .hourly-forecast .weather-list {
-    gap: 24px;
-  }
-
-  .no-results {
-    padding: 30px;
-    min-height: 458px;
-  }
-
-  .search-section .search-input {
-    font-size: 0.9rem; /* Smaller font for input */
-  }
-
-  .search-section .location-button {
-    width: 48px; /* Adjust button size */
+  body {
+    padding: 0;
   }
 
   .container {
-    min-height: 100vh;
+    height: 100vh;
+    margin: 0;
     border-radius: 0;
   }
 
+  .search-section {
+    margin-top: 20px;
+    padding: 8px;
+  }
+
+  .search-section .search-input::placeholder {
+    opacity: 0;
+  }
+
+  .current-weather {
+    margin-top: 30px;
+    gap: 15px;
+  }
+
+  .current-weather .datetime {
+    width: calc(100% - 30px);
+    padding: 8px;
+  }
+
   .current-weather .date {
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
 
   .current-weather .time {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .current-weather .weather-icon {
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
   }
 
   .current-weather .temperature {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   .current-weather .temperature span {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .current-weather .description {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .hourly-forecast {
+    padding: 8px;
+  }
+
+  .hourly-forecast .weather-list {
+    gap: 15px;
+  }
+
+  .hourly-forecast .weather-item {
+    min-width: 40px;
+    gap: 3px;
+  }
+
+  .hourly-forecast .weather-item .weather-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .hourly-forecast .weather-item .time,
+  .hourly-forecast .weather-item .temperature {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 625px) {
+  .container {
+    margin: 20px auto;
+  }
+}
+
+@media (max-height: 700px) {
+  .search-section {
+    margin-top: 15px;
+  }
+
+  .current-weather {
+    margin-top: 25px;
+    gap: 12px;
+  }
+
+  .current-weather .weather-icon {
+    width: 75px;
+    height: 75px;
+  }
+
+  .current-weather .temperature {
+    font-size: 1.8rem;
+  }
+
+  .current-weather .datetime {
+    padding: 4px;
+  }
+
+  .hourly-forecast {
+    padding: 6px 10px;
   }
 }
