@@ -4,6 +4,7 @@ import HourlyWeatherItem from "./components/HourlyWeatherItem";
 import { weatherCodes } from "./constants";
 import { useEffect, useRef, useState } from "react";
 import NoResultsDiv from "./components/NoResultsDiv";
+
 const App = () => {
   const [currentWeather, setCurrentWeather] = useState({});
   const [hourlyForecasts, setHourlyForecasts] = useState([]);
@@ -20,6 +21,7 @@ const App = () => {
     });
     setHourlyForecasts(next24HoursData);
   };
+
   // Fetches weather details based on the API URL
   const getWeatherDetails = async (API_URL) => {
     setHasNoResults(false);
@@ -42,12 +44,14 @@ const App = () => {
       setHasNoResults(true);
     }
   };
-  // Fetch default city (London) weather data on initial render
+
+  // Fetch default city (Harare) weather data on initial render
   useEffect(() => {
     const defaultCity = "Harare";
     const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${defaultCity}&days=2`;
     getWeatherDetails(API_URL);
   }, []);
+  
   return (
     <div className="container">
       {/* Search section */}

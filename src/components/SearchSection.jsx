@@ -1,3 +1,5 @@
+import { FaSearch, FaMapMarkerAlt } from 'react-icons/fa';
+
 const SearchSection = ({ getWeatherDetails, searchInputRef }) => {
     const API_KEY = import.meta.env.VITE_API_KEY;
     
@@ -26,11 +28,11 @@ const SearchSection = ({ getWeatherDetails, searchInputRef }) => {
     return (
       <div className="search-section">
         <form action="#" className="search-form" onSubmit={handleCitySearch}>
-          {/* <span className="material-symbols-rounded">search</span> */}
+          <span className="material-symbols-rounded">search</span>
           <input type="search" placeholder="Enter a city name" className="search-input" ref={searchInputRef} required />
         </form>
         <button className="location-button" onClick={handleLocationSearch}>
-          <span className="material-symbols-rounded">search</span>
+          <span className="material-symbols-rounded">location_on</span>
         </button>
       </div>
     );

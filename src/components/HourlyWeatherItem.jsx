@@ -1,4 +1,5 @@
 import { weatherCodes } from "../constants";
+
 const HourlyWeatherItem = ({ hourlyWeather }) => {
   // Extract and format temperature and time
   const temperature = Math.floor(hourlyWeather.temp_c);
@@ -13,4 +14,5 @@ const HourlyWeatherItem = ({ hourlyWeather }) => {
     </li>
   );
 };
+
 export default HourlyWeatherItem;
