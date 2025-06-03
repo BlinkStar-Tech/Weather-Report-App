@@ -54,7 +54,7 @@ body {
 }
 
 .search-section {
-  margin-top: 30px;
+  margin-top: 50px;
   padding: 10px;
   flex-shrink: 0;
   display: flex;
@@ -160,10 +160,9 @@ body {
 }
 
 .current-weather .weather-icon {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
 }
 
 .current-weather .temperature {
@@ -225,7 +224,6 @@ body {
   width: 30px;
   height: 30px;
   object-fit: contain;
-  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.2));
 }
 
 .hourly-forecast .weather-item .temperature {
@@ -291,8 +289,8 @@ body {
   }
 
   .current-weather .weather-icon {
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
   }
 
   .current-weather .temperature {
@@ -348,8 +346,8 @@ body {
   }
 
   .current-weather .weather-icon {
-    width: 90px;
-    height: 90px;
+    width: 75px;
+    height: 75px;
   }
 
   .current-weather .temperature {

@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { weatherCodes } from "../constants";
 
 const CurrentWeather = ({ currentWeather }) => {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -8,11 +7,6 @@ const CurrentWeather = ({ currentWeather }) => {
     const timer = setInterval(() => setCurrentTime(new Date()), 1000);
     return () => clearInterval(timer);
   }, []);
-
-  // Find the appropriate weather icon based on condition code
-  const weatherIcon = Object.keys(weatherCodes).find(
-    (icon) => weatherCodes[icon].includes(currentWeather.condition.code)
-  );
 
   return (
     <div className="current-weather">
@@ -35,7 +29,7 @@ const CurrentWeather = ({ currentWeather }) => {
         </div>
       </div>
       <img 
-        src={`/icons/${weatherIcon}.svg`}
+        src={`src/images/clouds-and-sun.png`}
         className="weather-icon" 
         alt={currentWeather.description} 
       />
