@@ -54,7 +54,6 @@ body {
 }
 
 .search-section {
-  margin-top: 50px;
   padding: 10px;
   flex-shrink: 0;
   display: flex;
@@ -63,6 +62,7 @@ body {
 }
 
 .search-section .search-form {
+  margin-top: 20px;
   flex: 1;
   height: 40px;
   position: relative;
@@ -101,6 +101,7 @@ body {
 }
 
 .search-section .location-button {
+  margin-top: 20px;
   height: 40px;
   width: 40px;
   color: #fff;
@@ -135,10 +136,11 @@ body {
   align-items: center;
   padding: 5px 0;
   gap: 20px;
-  margin-top: 50px;
+  
 }
 
 .current-weather .datetime {
+  margin-top: 30px;
   text-align: center;
   color: #fff;
   padding: 6px;
@@ -189,7 +191,7 @@ body {
   flex-shrink: 0;
   padding: 8px 12px;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
-  margin-top: auto;
+  margin-top: 50px;
 }
 
 .hourly-forecast .weather-list {

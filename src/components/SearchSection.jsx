@@ -28,7 +28,7 @@ const SearchSection = ({ getWeatherDetails, searchInputRef }) => {
     return (
       <div className="search-section">
         <form action="#" className="search-form" onSubmit={handleCitySearch}>
-          <span className="material-symbols-rounded">search</span>
+          <span className="material-symbols-rounded"></span>
           <input 
             type="search" 
             placeholder="Search for a city..." 
@@ -38,7 +38,7 @@ const SearchSection = ({ getWeatherDetails, searchInputRef }) => {
           />
         </form>
         <button className="location-button" onClick={handleLocationSearch} title="Get current location">
-          <span className="material-symbols-rounded">location_on</span>
+          <span className="material-symbols-rounded">Search</span>
         </button>
       </div>
     );
